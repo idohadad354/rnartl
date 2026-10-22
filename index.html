@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Documentation · RNA RTL</title>
+    <link rel="icon" href="logo.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top">
+      <a class="brand" href="index.html"><img src="logo.png" alt="" width="32" height="32" />RNA RTL</a>
+      <nav>
+        <a href="index.html">Documentation</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="security.html">Security</a>
+        <a href="sla.html">Support SLA</a>
+      </nav>
+    </header>
+    <main>
+<!-- title: Documentation -->
+<h1>RNA RTL</h1>
+<p class="lead">Right-to-left Hebrew and Arabic for Confluence Cloud: bullets, numbers, checkboxes and table columns on the right, and punctuation where it belongs.</p>
+<p class="he lead">עברית מימין לשמאל ב-Confluence, כמו שצריך.</p>
+<img class="shot" src="screenshot.png" alt="An RTL Block on a Confluence page: Hebrew headings, lists and a table laid out right to left" />
+
+<h2>Getting started</h2>
+<ol>
+  <li>A site admin installs RNA RTL from the Atlassian Marketplace.</li>
+  <li>In the Confluence editor, type <kbd>/RTL</kbd> and choose <strong>RTL Block</strong>.</li>
+  <li>The full-screen RTL editor opens. Write your content and click <strong>Insert</strong> (or press <kbd>Ctrl</kbd>+<kbd>S</kbd>).</li>
+  <li>To change it later, select the block on the page and click its edit (✎) button.</li>
+</ol>
+
+<h2>The toolbar</h2>
+<table>
+  <tr><th>Tool</th><th>What it does</th></tr>
+  <tr><td>¶← / ¶→</td><td>Force a paragraph right-to-left or left-to-right. Click again to return to automatic. Keyboard: <kbd>Ctrl</kbd>+<kbd>Right Shift</kbd> / <kbd>Ctrl</kbd>+<kbd>Left Shift</kbd>.</td></tr>
+  <tr><td>Align</td><td>Right, center or left.</td></tr>
+  <tr><td>Text style and size</td><td>Normal text or Heading 1 to 3. Font size (Small, Normal, Large, Extra large) applies to the whole paragraph.</td></tr>
+  <tr><td>Formatting</td><td>Bold, italic, underline, strikethrough, text color and highlight.</td></tr>
+  <tr><td>Lists</td><td>Bulleted, numbered and checklists.</td></tr>
+  <tr><td>Table</td><td>Insert a table; inside a table, add or remove rows and columns, toggle the header row, merge or split cells.</td></tr>
+  <tr><td>Link, image, emoji</td><td>Images are inserted from a public <code>https://</code> address.</td></tr>
+</table>
+
+<h2>Mixed Hebrew and English</h2>
+<p>Each paragraph takes its direction from its first letter, so an English paragraph flows left-to-right inside an RTL block while list bullets and table columns stay aligned. When a paragraph starts with an English word but is really Hebrew (for example <span class="he">"Jira מחובר לקונפלואנס"</span>), force it with ¶←.</p>
+
+<h2>Where your content lives</h2>
+<p>Everything you write is saved inside the Confluence page itself, as part of the RTL Block. Confluence search indexes its text, page history tracks it, and RNA RTL has no servers or database of its own. See the <a href="privacy.html">privacy policy</a>.</p>
+
+<h2>Exporting</h2>
+<p>PDF export keeps the right-to-left layout, but Confluence's PDF engine reverses the letters of Hebrew and Arabic words in all page content, a known Confluence limitation. RTL blocks are not yet included in Word export.</p>
+
+<h2>Subscription</h2>
+<p>If your site's subscription ends, every existing RTL block keeps displaying right-to-left for readers. Creating and editing RTL blocks resumes when a site admin renews the subscription.</p>
+
+<h2>Known limits</h2>
+<ul>
+  <li>Images attached through the regular Confluence editor appear as a placeholder inside an RTL block; insert images by URL instead.</li>
+  <li>Checklist items are ticked in the RTL editor, not directly on the page.</li>
+  <li>Panels, mentions, status lozenges and other macros added with the regular editor are kept as-is and shown as grey chips in the RTL editor.</li>
+</ul>
+
+<h2>Help</h2>
+<p>Questions, problems or feature requests: <a href="support.html">contact support</a>. Support hours and response times are in the <a href="sla.html">support SLA</a>.</p>
+
+    </main>
+    <footer>© RNA Apps · RNA RTL is an app for Atlassian Confluence Cloud and is not made by Atlassian. · <a href="mailto:ops@rna-app.com">ops@rna-app.com</a></footer>
+  </body>
+</html>

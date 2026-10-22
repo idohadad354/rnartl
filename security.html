@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Security Policy · RNA RTL</title>
+    <link rel="icon" href="logo.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top">
+      <a class="brand" href="index.html"><img src="logo.png" alt="" width="32" height="32" />RNA RTL</a>
+      <nav>
+        <a href="index.html">Documentation</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="security.html">Security</a>
+        <a href="sla.html">Support SLA</a>
+      </nav>
+    </header>
+    <main>
+<!-- title: Security Policy -->
+<h1>Security Policy</h1>
+<p class="meta">Effective October 22, 2026</p>
+
+<h2>Architecture</h2>
+<ul>
+  <li>RNA RTL is a static user interface hosted and served by Atlassian Forge. It has no backend functions, servers, database, credentials or API keys.</li>
+  <li>It requests no Atlassian OAuth scopes. It reads only the macro it is rendering, which Confluence passes to it directly.</li>
+  <li>It runs in Forge's sandboxed iframes under Atlassian's Content Security Policy. The only extra permissions are inline styles (for text colors) and loading images from addresses that authors insert.</li>
+  <li>Content is stored by Confluence, so it inherits Atlassian's encryption, backups and data residency.</li>
+</ul>
+
+<h2>Secure development</h2>
+<ul>
+  <li>Dependencies are pinned with a lockfile, and every release is blocked automatically if <code>npm audit</code> reports a high or critical vulnerability in shipped code.</li>
+  <li>Every release passes an automated test suite, including validation of all saved content against Atlassian's official document schema.</li>
+  <li>Link and image addresses are sanitized: <code>javascript:</code>, <code>data:</code> and similar schemes are rejected.</li>
+  <li>Developer and Marketplace accounts are protected with two-step verification, and only the vendor can deploy releases.</li>
+</ul>
+
+<h2>Reporting a vulnerability</h2>
+<p>Email <a href="mailto:hadadapps@gmail.com">hadadapps@gmail.com</a> with the details and steps to reproduce. We acknowledge reports within 2 business days, keep you informed, and fix confirmed issues within the timeframes of Atlassian's Marketplace security bug fix policy. Please give us a reasonable chance to fix an issue before disclosing it publicly.</p>
+
+<h2>Incident response plan</h2>
+<ol>
+  <li><strong>Triage.</strong> Confirm the report, rate severity with CVSS, and record a timeline.</li>
+  <li><strong>Contain.</strong> Ship a fix or a safe rollback through Forge, which updates every installation without customer action.</li>
+  <li><strong>Notify.</strong> Inform Atlassian within 48 hours of becoming aware of a security incident, and affected customers without undue delay (within 72 hours where personal data is affected).</li>
+  <li><strong>Recover and review.</strong> Verify the fix, then write a post-incident review with root cause and preventive actions.</li>
+</ol>
+
+    </main>
+    <footer>© RNA Apps · RNA RTL is an app for Atlassian Confluence Cloud and is not made by Atlassian. · <a href="mailto:ops@rna-app.com">ops@rna-app.com</a></footer>
+  </body>
+</html>
